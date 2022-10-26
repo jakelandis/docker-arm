@@ -1,6 +1,6 @@
 version: '3'
 services:
-  oidc-provider:
+  shibboleth-idp:
     build:
       context: .
       dockerfile: Dockerfile
