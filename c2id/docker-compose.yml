@@ -1,0 +1,11 @@
+version: '3'
+services:
+  oidc-provider:
+    image: "elastic/c2id-server-demo"
+    ports:
+      - 8080:8080
+    networks:
+      - esnet   
+
+networks:
+  esnet:
