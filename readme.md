@@ -9,5 +9,5 @@ open http://127.0.0.1:8080/oidc-client (should see demo app)
 ```bash
 cd shibboleth
 docker-compose up --build (expected error on keystore)
-open http://localhost:8080 (tomcat should be running)
+open https://localhost:4443/ (accept the TLS warnings and Jetty should be running)
 ```
