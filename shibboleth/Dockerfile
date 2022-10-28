@@ -20,9 +20,6 @@ ENV JETTY_HOME=/opt/jetty-home \
     JETTY_BROWSER_SSL_KEYSTORE_PASSWORD=changeme \
     JETTY_BACKCHANNEL_SSL_KEYSTORE_PASSWORD=changeme 
 
-#RUN  apt-get update \
-#  && apt-get install -y wget 
-
 # Download Jetty, verify the hash, and install, initialize a new base
 RUN wget -q https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-distribution/$jetty_version/jetty-distribution-$jetty_version.tar.gz \
     && echo "$jetty_hash  jetty-distribution-$jetty_version.tar.gz" | sha1sum -c - \
@@ -96,4 +93,3 @@ RUN chmod +x /opt/jetty-home/bin/jetty.sh
 EXPOSE 4443 8443
 
 CMD ["run-jetty.sh"]
-#CMD ["sleep", "10m"]
